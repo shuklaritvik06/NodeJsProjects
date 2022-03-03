@@ -33,3 +33,18 @@ myDoc.save().then(()=>{
 }).catch((err)=>{
   console.error(err);
 })
+
+
+
+modal.find().then((data)=>{
+  console.log(data)
+}).catch((err)=>{
+  console.error(err);
+})
+
+modal.findById(id).then((result)=>{
+  console.log(result)
+}).catch((err)=>{
+  console.error(err)
+})
+
