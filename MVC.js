@@ -12,3 +12,10 @@
 // Require them in the route
 
 // Done
+
+
+// Controller => Handlers
+
+// Models => Database Models
+
+// View => Template Files
