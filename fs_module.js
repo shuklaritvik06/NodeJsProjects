@@ -1,6 +1,13 @@
 const fs = require('fs');
 
-// Read File
+// Read File (Sync)
+fs.readFileSync("fileName","utf8",(err,data)=>{
+   console.log(data);
+   fs.writeFileSync("fileName",data);
+})
+
+
+// Read File (Async)
 
 fs.readFile('relativePath',(err,data)=>{
   if(err){
