@@ -19,4 +19,4 @@ stream.on('data',(data)=>{
 
 // PIPING THROUGH STREAMS
 
-readstream.pipe(writestream);  // It will pass the chunks to the writestream and will be written :)
+readstream.pipe(writestream);  // It will pass the chunks to the writestream and will be written :)  ,  in case of serving data on the browser writestream would be the response
