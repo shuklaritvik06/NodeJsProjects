@@ -1,6 +1,5 @@
 const formidable = require('express-formidable');
 const model = require('../models/db');
-const swal = require('sweetalert');
 module.exports = function (app){
   app.use(formidable());
   //  Request Handlers
