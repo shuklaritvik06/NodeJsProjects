@@ -2,9 +2,9 @@
 
 Simple Code Blocks for me to refer :)
 
-- [ ] Url Shortner
-- [ ] Todo App
-- [ ] Blog App
+- [x] Url Shortner
+- [x] Todo App
+- [x] Blog App
 - [ ] Chat App
 - [ ] Meeting App
 - [ ] CLI
