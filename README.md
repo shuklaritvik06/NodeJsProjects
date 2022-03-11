@@ -6,7 +6,7 @@ Simple Code Blocks for me to refer :)
 - [x] Todo App
 - [x] Blog App
 - [x] CLI
-- [ ] Chat App
+- [x] Chat App
 - [ ] Meeting App
 - [ ] File Share
 - [ ] Ecommerce
