@@ -9,4 +9,3 @@ Simple Code Blocks for me to refer :)
 - [x] Chat App
 - [ ] Meeting App
 - [ ] File Share
-- [ ] Ecommerce
