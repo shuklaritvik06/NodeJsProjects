@@ -7,5 +7,7 @@ Simple Code Blocks for me to refer :)
 - [x] Blog App
 - [x] CLI
 - [x] Chat App
+- [ ] Email Client
+- [ ] Postman Clone
 - [ ] Meeting App
 - [ ] File Share
