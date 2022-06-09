@@ -6,3 +6,4 @@ myEventEmitter.on('myevent',function(arguement)=>{
   console.log(arguement);
 });
 myEventEmitter.emit('myevent','HELLO');
+console.log(myEventEmitter.listeners("myevent"));
