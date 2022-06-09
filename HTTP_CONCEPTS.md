@@ -13,3 +13,9 @@
 - 5xx => Server Error
 ```
 
+### DNS (Domain Name System)
+
+DNS allows computers to resolve hostname to an IP address. Our OS asks DNS does it know the IP of website we want to know and then it asks to other DNS does anyone know the address of authorative server which knows ".com" IPs then it is transferred to such server where it asks does it know if not it transfers it to the address where there is a possibility,then it gets and return it to the browser and then browser send the get request to the hosted server.
+
+DNS also caches the IPs for better seamless experience.
+
