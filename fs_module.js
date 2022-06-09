@@ -55,3 +55,15 @@ if(fs.existSync('relativeFilePath')){
     console.log("Successfully deleted ");
   });
 }
+
+// Rename a File
+
+
+if(fs.existSync('relativeFilePath')){
+  fs.rename('oldPath','newPath',(err)=>{
+    if(err){
+      console.log(err);
+    }
+    console.log("Successfully renamed ");
+  });
+}
