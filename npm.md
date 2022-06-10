@@ -14,6 +14,11 @@ npm update moduleName // update a module
 npm whoami  // prints username of your npm registry account
 npm bin // Gives the path of executables installation directory  (.bin directory in node_modules dir)
 npm bugs package // Opens a browser (seedhi baat issues kholdega github pe)
+npm start  // Run a start script specified in the package.json file
+npm stop // runs a script specified in the package.json file
+npm test // runs a test script in package.json file
+
+
 
 *PACKAGE ACCESS*
 
@@ -34,6 +39,25 @@ npm audit fix --package-lock-only  // Only update package lock not the modules
 npm audit fix --only=prod  // Only audit the dependencies
 npm audit fix --dry-run --json  // Dry run and give the json containing any vulnerability, level, number, what package etc
 npm audit --audit-level=moderate // Only audit moderate level vulnerability
+
+
+*TEAM COMMANDS*
+
+npm team create @org:teamName   // Create a team under an org (Team Prime under org Amazon)
+npm team destroy @org:teamName   // Delete a team under an org 
+npm team add @org:teamName username  // Add a user to the team
+npm team rm @org:teamName username  // remove user
+npm team ls @org:teamName   // list all users in the team
+npm team ls @org  // List all teams in an org
+
+*PACKAGE INFO*
+
+npm view packageName  // prints an Info about the given Package
+npm view packageName dependencies  // prints the dependencies in json
+npm view packageName repository.url  // prints github repo url
+npm view packageName contributors.email  // prints the contributors email
+npm view packageName contributors.name  // prints the name of the contributors of a package
+npm view packageName versions  // Gives an array of the versions of the package
 ```
 
 ## Semantic Versioning
@@ -58,5 +82,4 @@ For production environment make sure to set `NODE_ENV="production"`
 - `postinstall`
 - `start`
 - `dev`
-- 
 
