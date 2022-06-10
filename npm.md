@@ -1,0 +1,62 @@
+## Important NPM Commands
+
+
+```
+*BASIC*
+
+npm i moduleName  // Install
+npm remove moduleName or npm uninstall moduleName  // Uninstall or remove the package
+npm root -g // shows the directory in which global modules are stored
+npm i -g moduleName or  npm i --location=global moduleName // install package globally, second one is preferred to use now
+npm i -g npm@latest // upgrade npm
+npm i --save-dev moduleName or npm i -D moduleName
+npm update moduleName // update a module
+npm whoami  // prints username of your npm registry account
+npm bin // Gives the path of executables installation directory  (.bin directory in node_modules dir)
+npm bugs package // Opens a browser (seedhi baat issues kholdega github pe)
+
+*PACKAGE ACCESS*
+
+npm access public packageName
+npm access restricted packageName
+npm access grant read-only|read-write team packageName
+npm access revoke read-only|read-write team packageName
+npm access 2fa-required packageName  // Anyone publishing would need 2fa
+npm access ls-packages user|team  // gives an object with the packages name and perms which user or team have access to
+npm access ls-collaborators packageName // gives an object with the collabs name and perms which user or team have access to
+npm ci  // Same like npm i but it is necessary to have lock file here, same data in both lock and package.json about packages
+
+
+*FIX PACKAGES*
+
+npm audit fix   // Scan and fix packages vulnerabilities
+npm audit fix --package-lock-only  // Only update package lock not the modules
+npm audit fix --only=prod  // Only audit the dependencies
+npm audit fix --dry-run --json  // Dry run and give the json containing any vulnerability, level, number, what package etc
+npm audit --audit-level=moderate // Only audit moderate level vulnerability
+```
+
+## Semantic Versioning
+
+Semantic versioning is a standard to version a package with MAJOR.MINOR.PATCH.
+
+- MAJOR is when there is a change which could break my code maybe package changed the implementation of the method which i was using.
+- MINOR is when there is an addition of a feature , and it will not effect the code I have written.
+- PATCH is when there is an bug fix of the new feature added to the package
+
+- ^ => MAJOR same, MINOR & PATCH as much as you can (default)
+- ~ => MAJOR , MINOR same, PATCH as much as you can 
+- Nothing => Exact
+
+For production environment make sure to set `NODE_ENV="production"`
+
+## NPM Scripts
+
+- `prepublish`
+- `postpublish`
+- `preinstall`
+- `postinstall`
+- `start`
+- `dev`
+- 
+
