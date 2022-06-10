@@ -17,7 +17,15 @@ npm bugs package // Opens a browser (seedhi baat issues kholdega github pe)
 npm start  // Run a start script specified in the package.json file
 npm stop // runs a script specified in the package.json file
 npm test // runs a test script in package.json file
-
+npm shrinkwrap  // Renames the package-lock.json to npm-shrinkwrap.json and it takes precedence over other package-lock.json
+npm pkg set scripts.scriptName="COMMAND"  // Set the script and its command from the cli
+npm s|search|se packageName    // prints the packages and its info matching 
+npm rb|rebuild  // When we have a new node installed then
+npm prune packageName  // Prune Not in the package json file
+npm outdated  // lists the outdated dependencies
+npm install-test  // runs the npm test just after npm install
+npm deprecate <pkg>@"version" <message>   // Deprecate a version of a package
+npm dedupe   // This will search the package tree and will optimize by moving the package up the tree where can be shared among more
 
 
 *PACKAGE ACCESS*
@@ -58,6 +66,58 @@ npm view packageName repository.url  // prints github repo url
 npm view packageName contributors.email  // prints the contributors email
 npm view packageName contributors.name  // prints the name of the contributors of a package
 npm view packageName versions  // Gives an array of the versions of the package
+
+
+*AUTH TOKENS*
+
+npm token list
+npm token revoke tokenID
+npm token create options name
+
+*PROFILE*
+
+npm profile enable-2fa auth-only|auth-and-writes
+npm profile disable-2fa
+npm profile get name|email|two-factor-auth|fullname
+npm profile set name|email|two-factor-auth|fullname value
+
+*OWNER*
+
+npm owner add USER package
+npm owner rm USER package
+npm owner ls USER package
+
+*ORGANIZATION*
+
+npm org set orgname username [developer | admin | owner]   // Add user to org with the position
+npm org rm orgname username  // Remove user from org
+npm org ls orgname [<username>]  // list all users  or see what role a user has in org if used username too
+
+*PACKAGE DIST TAGS*
+
+npm dist-tag add <pkg>@<version> [<tag>]  // This will reference the version number to the provided tag Name
+npm dist-tag rm <pkg> <tag>  // Remove the tag
+npm dist-tag ls [<pkg>]  // list all version tags
+
+*CONFIG*
+
+npm config set key=value
+npm config get key
+npm config delete key
+npm config list
+npm config edit
+
+*CACHE*
+
+npm cache add <tarball file>
+npm cache add <folder>
+npm cache add <tarball url>
+npm cache add <git url>
+npm cache add <name>@<version>
+npm cache clean [<key>]
+npm cache ls [<name>@<version>]
+npm cache verify
+
 ```
 
 ## Semantic Versioning
@@ -82,4 +142,8 @@ For production environment make sure to set `NODE_ENV="production"`
 - `postinstall`
 - `start`
 - `dev`
-
+- `prerestart`
+- `restart`
+- `postrestart`
+- `prestop`
+- `poststop`
