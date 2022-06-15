@@ -10,7 +10,10 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.get("/", function(req, res) {
     res.render("home");
 });
-
-app.listen(5000,function(){
-    console.log("Server started on port 5000");
+app.post("/api/files",(req,res)=>{
+    console.log(req);
+    res.send("ok");
+})
+app.listen(8000,function(){
+    console.log("Server started on port 8000");
 })
