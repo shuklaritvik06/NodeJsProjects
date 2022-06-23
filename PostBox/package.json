@@ -1,7 +1,7 @@
 {
-  "name": "postmanclone",
+  "name": "postbox",
   "version": "1.0.0",
-  "description": "This build can be used to send a get,post request etc. using a UI. Made for enhancing skills",
+  "description": "This build can be used to send a get,post,put,patch,delete request, using a UI. Made for enhancing skills",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -13,9 +13,9 @@
   "license": "MIT",
   "dependencies": {
     "body-parser": "^1.20.0",
+    "cors": "^2.8.5",
     "dotenv": "^16.0.1",
     "ejs": "^3.1.8",
-    "express": "^4.18.1",
-    "mongoose": "^6.3.6"
+    "express": "^4.18.1"
   }
 }
