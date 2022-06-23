@@ -6,7 +6,7 @@
 - [x] CLI
 - [x] Chat App
 - [x] API Proxy
+- [x] Postman Clone
 - [ ] Email Client
-- [ ] Postman Clone
 - [ ] Meeting App
 - [ ] File Share
