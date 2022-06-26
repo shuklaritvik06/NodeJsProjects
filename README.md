@@ -7,5 +7,5 @@
 - [x] Chat App
 - [x] API Proxy
 - [x] PostBox
+- [x] Shareongo
 - [ ] Meet&Greet
-- [ ] Shareongo
