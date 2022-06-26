@@ -4,7 +4,8 @@
   "description": "This build can be used to send a get,post,put,patch,delete request, using a UI. Made for enhancing skills",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js",
+    "dev": "nodemon index.js"
   },
   "keywords": [
     "postman"
