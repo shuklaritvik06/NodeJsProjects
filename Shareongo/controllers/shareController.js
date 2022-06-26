@@ -7,12 +7,18 @@ function getHomePage(req, res) {
 
 function uploadFile(req, res) {
   const fileName = req.headers["file-name"];
-  req.on("data", (data) => {
-    fs.appendFileSync(__dirname + "/uploads/" + fileName, data);
-  });
+  if (!fs.existsSync(__dirname + "/uploads/")) {
+    fs.mkdirSync(__dirname + "/uploads/");
+    req.on("data", (data) => {
+      fs.appendFileSync(__dirname + "/uploads/" + fileName, data);
+    });
+  } else {
+    req.on("data", (data) => {
+      fs.appendFileSync(__dirname + "/uploads/" + fileName, data);
+    });
+  }
   res.end();
 }
-
 
 function sendEmail(req, res) {
   const name = req.body.senderName;
@@ -47,8 +53,8 @@ function getFile(req, res) {
 }
 
 module.exports = {
-    getHomePage,
-    uploadFile,
-    sendEmail,
-    getFile
-}
+  getHomePage,
+  uploadFile,
+  sendEmail,
+  getFile,
+};
