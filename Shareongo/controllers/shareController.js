@@ -7,15 +7,12 @@ function getHomePage(req, res) {
 
 function uploadFile(req, res) {
   const fileName = req.headers["file-name"];
-  if (!fs.existsSync(__dirname + "/uploads/")) {
+  if(!fs.existsSync(__dirname + "/uploads/")){
     fs.mkdirSync(__dirname + "/uploads/");
-    req.on("data", (data) => {
-      fs.appendFileSync(__dirname + "/uploads/" + fileName, data);
-    });
-  } else {
-    req.on("data", (data) => {
-      fs.appendFileSync(__dirname + "/uploads/" + fileName, data);
-    });
+  }else{
+    req.on("data",(chunk)=>{
+      fs.appendFileSync(__dirname + "/uploads/" + fileName,chunk);
+    }); 
   }
   res.end();
 }
