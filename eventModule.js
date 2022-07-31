@@ -6,11 +6,10 @@ myEventEmitter.on('myevent',(argument)=>{
   console.log(argument);
 });
 myEventEmitter.emit('myevent','HELLO');
-console.log(myEventEmitter.listeners("myevent"));
 myEventEmitter.eventNames().forEach(eventName=>{
     console.log(eventName);
 });
-console.log(myEventEmitter.listenerCount("maxListenersExceeded"))
+console.log(myEventEmitter.listenerCount("myevent"))
 myEventEmitter.listeners("myevent").forEach(listener=>{
     console.log(listener.toString());
 });
@@ -23,4 +22,4 @@ myEventEmitter.prependListener("myevent",()=>{
     console.log("Listeners");
 }).prependListener("myevent",()=>{
     console.log("Listeners");
-})
+});
