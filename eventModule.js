@@ -2,8 +2,8 @@
 
 const events = require('events');
 const myEventEmitter = new events.EventEmitter();
-myEventEmitter.on('myevent',function(arguement)=>{
-  console.log(arguement);
+myEventEmitter.on('myevent',(argument)=>{
+  console.log(argument);
 });
 myEventEmitter.emit('myevent','HELLO');
 console.log(myEventEmitter.listeners("myevent"));
