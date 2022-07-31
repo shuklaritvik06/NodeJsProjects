@@ -22,8 +22,8 @@ router.post("/register", async (req, res) => {
 
 // Login a user
 
-router.post("/login", async (req, res) => {
-    model.find({username: req.fields.name}).then((result)=>{
+router.post("/login", (req, res) => {
+    model.find({username: req.fields.name}).then( async (result)=>{
         if(result.length===0){
           res.redirect("/");
         }
